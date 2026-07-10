@@ -10,47 +10,41 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial, sans-serif;
+            font-family:Arial,sans-serif;
         }
 
         body{
-            background:linear-gradient(135deg,#00C9FF,#92FE9D);
-    color:#ffffff;
-    height:100vh;
-            
+            background:inear-gradient(135deg,#0096C7);
+            color:#fff;
         }
 
         header{
-            background:#222;
+            background:#0077cc;
             color:white;
             padding:20px;
             text-align:center;
         }
 
         nav{
-            background:#444;
-            padding:10px;
-            text-align:center;
+            background:#005fa3;
+            display:flex;
+            justify-content:center;
         }
 
         nav a{
             color:white;
+            padding:15px 20px;
             text-decoration:none;
-            margin:0 15px;
-            font-weight:bold;
         }
 
         nav a:hover{
-            color:#ffd700;
+            background:#00457a;
         }
 
         section{
             max-width:900px;
-            margin:30px auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.1);
+            margin:auto;
+            padding:50px 20px;
         }
 
         h2{
@@ -58,15 +52,16 @@
             margin-bottom:15px;
         }
 
-        .project{
-            background:#f0f0f0;
-            padding:15px;
-            margin-top:10px;
-            border-radius:8px;
+        .card{
+            background:white;
+            padding:20px;
+            margin:15px 0;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
         }
 
         footer{
-            background:#222;
+            background:#0077cc;
             color:white;
             text-align:center;
             padding:15px;
@@ -82,62 +77,65 @@
 </header>
 
 <nav>
-    <a href="#home">หน้าแรก</a>
-    <a href="#about">เกี่ยวกับฉัน</a>
-    <a href="#portfolio">ผลงาน</a>
-    <a href="#skills">ทักษะ</a>
-    <a href="#contact">ติดต่อ</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section id="home">
-    <h2>1. หน้าแรก</h2>
-    <p>สวัสดีครับ/ค่ะ ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน</p>
+    <div class="card">
+        <h2>🏠 Home</h2>
+        <p>สวัสดีครับ ผมเป็นนักพัฒนาเว็บไซต์และกำลังพัฒนาทักษะด้านการเขียนโปรแกรม</p>
+    </div>
 </section>
 
 <section id="about">
-    <h2>2. เกี่ยวกับฉัน</h2>
-    <p>
-        ชื่อ: ชื่อของคุณ<br>
-        กำลังศึกษา/ทำงานด้าน...<br>
-        สนใจด้าน Web Development และการออกแบบเว็บไซต์
-    </p>
+    <div class="card">
+        <h2>👤 About Me</h2>
+        <p>
+            ชื่อ: นายตัวอย่าง<br>
+            อายุ: 20 ปี<br>
+            สนใจด้าน Web Development, HTML, CSS และ JavaScript
+        </p>
+    </div>
 </section>
 
 <section id="portfolio">
-    <h2>3. ผลงาน</h2>
-
-    <div class="project">
-        <h3>โปรเจกต์ที่ 1</h3>
-        <p>เว็บไซต์ร้านค้าออนไลน์</p>
+    <div class="card">
+        <h2>💼 Portfolio</h2>
+        <ul>
+            <li>เว็บไซต์ร้านกาแฟ</li>
+            <li>ระบบจัดการนักเรียน</li>
+            <li>เว็บไซต์ Portfolio ส่วนตัว</li>
+        </ul>
     </div>
-
-    <div class="project">
-        <h3>โปรเจกต์ที่ 2</h3>
-        <p>ระบบจัดการนักเรียน</p>
-    </div>
-
 </section>
 
 <section id="skills">
-    <h2>4. ทักษะ</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>MySQL</li>
-    </ul>
+    <div class="card">
+        <h2>💻 Skills</h2>
+        <ul>
+            <li>HTML ⭐⭐⭐⭐⭐</li>
+            <li>CSS ⭐⭐⭐⭐☆</li>
+            <li>JavaScript ⭐⭐⭐☆☆</li>
+            <li>Python ⭐⭐⭐⭐☆</li>
+        </ul>
+    </div>
 </section>
 
 <section id="contact">
-    <h2>5. ติดต่อ</h2>
-    <p>Email : your@email.com</p>
-    <p>โทร : 08x-xxx-xxxx</p>
-    <p>Facebook : Your Name</p>
+    <div class="card">
+        <h2>📞 Contact</h2>
+        <p>Email : example@email.com</p>
+        <p>Phone : 081-234-5678</p>
+        <p>Facebook : Your Name</p>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    <p>&copy; 2026 My Portfolio | All Rights Reserved</p>
 </footer>
 
 </body>
