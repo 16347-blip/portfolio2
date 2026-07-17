@@ -102,37 +102,94 @@ footer{
     animation:dolphinMove 18s linear infinite;
 }
 @keyframes dolphinMove{
+
 0%{
     left:-100px;
 }
+
 50%{
     transform:translateY(-30px);
 }
+
 100%{
     left:110%;
 }
+
+}
+
+
 /* ปลา */
+
 .fish{
+
     position:fixed;
     font-size:40px;
     z-index:4;
+
 }
+
+
 .fish1{
+
     bottom:180px;
     left:-100px;
     animation:fishMove 15s linear infinite;
+
 }
+
+
 .fish2{
+
     bottom:260px;
     left:-120px;
     animation:fishMove 22s linear infinite;
+
 }
+
+
 .fish3{
+
     bottom:120px;
     left:-150px;
     animation:fishMove 18s linear infinite;
+
 }
 
+
+@keyframes fishMove{
+
+0%{
+
+    left:-150px;
+
+}
+
+100%{
+
+    left:110%;
+
+}
+
+}
+.wave{
+
+position:absolute;
+
+bottom:-5px;
+
+left:0;
+
+width:100%;
+
+height:90px;
+
+background:white;
+
+border-radius:50% 50% 0 0;
+
+opacity:.8;
+
+}
 
 </style>
 
