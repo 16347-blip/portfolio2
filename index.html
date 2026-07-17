@@ -9,13 +9,18 @@ body{
     margin:0;
     font-family:"Tahoma";
     text-align:center;
-    background:linear-gradient(#b9ecff,#e8fbff);
+    background:linear-gradient(
+        #d8f8ff,
+        #b7ecff,
+        #eaffff,
+        #ffffff
+    );
     overflow-x:hidden;
 }
 
 /* Header */
-header{
     <div class="wave"></div>
+header{
     background:linear-gradient(180deg,#00bfff,#008cff);
     color:white;
     padding:60px 20px 120px;
@@ -100,6 +105,25 @@ footer{
     margin-top:30px;
 }
 </style>
+    .wave{
+
+position:absolute;
+
+bottom:-5px;
+
+left:0;
+
+width:100%;
+
+height:90px;
+
+background:#ffffff;
+
+border-radius:50% 50% 0 0;
+
+opacity:.8;
+
+}
 
 </head>
 
@@ -108,6 +132,13 @@ footer{
 <header>
     <h1>🌊 My Portfolio</h1>
     <p>แฟ้มสะสมผลงานของฉัน</p>
+</header<header>
+
+    <h1>🌊 My Portfolio</h1>
+    <p>แฟ้มสะสมผลงานของฉัน</p>
+
+    <div class="wave"></div>
+
 </header>
 
 <!-- โปรไฟล์ -->
@@ -159,7 +190,13 @@ footer{
 <footer>
 © 2026 My Portfolio
 </footer>
+<!-- สัตว์ทะเล -->
+<div class="dolphin">🐬</div>
 
+<div class="fish fish1">🐠</div>
+<div class="fish fish2">🐟</div>
+<div class="fish fish3">🐡</div>
+    
 <script>
 const upload = document.getElementById("upload");
 const preview = document.getElementById("preview");
