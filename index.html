@@ -5,7 +5,6 @@
 <title>My Portfolio</title>
 
 <style>
-
 body{
     margin:0;
     font-family:"Tahoma";
@@ -13,17 +12,57 @@ body{
     text-align:center;
 }
 
+/* Header */
 header{
     background:linear-gradient(#00c6ff,#0072ff);
     color:white;
-    padding:60px;
+    padding:50px 20px 70px;
     border-radius:0 0 50px 50px;
 }
 
 h1{
     font-size:45px;
+    margin-bottom:10px;
 }
 
+/* โปรไฟล์ */
+.profile{
+    margin-top:-35px;
+}
+
+.profile img{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    background:white;
+}
+
+.profile input{
+    display:none;
+}
+
+.upload-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#00bfff;
+    color:white;
+    padding:10px 22px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 4px 10px #9edfff;
+    transition:0.3s;
+}
+
+.upload-btn:hover{
+    background:#008dcc;
+    transform:scale(1.05);
+}
+
+/* เมนู */
 .menu{
     margin:40px;
 }
@@ -40,6 +79,7 @@ h1{
     box-shadow:0 5px 15px #9edfff;
     font-size:18px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .menu a:hover{
@@ -48,27 +88,40 @@ h1{
     transform:scale(1.1);
 }
 
+/* Footer */
 footer{
     background:#008dcc;
     color:white;
     padding:20px;
+    margin-top:30px;
 }
-
 </style>
 
 </head>
 
-
 <body>
 
 <header>
-
-<h1>🌊 My Portfolio</h1>
-
-<p>แฟ้มสะสมผลงานของฉัน</p>
-
+    <h1>🌊 My Portfolio</h1>
+    <p>แฟ้มสะสมผลงานของฉัน</p>
 </header>
 
+<!-- โปรไฟล์ -->
+<div class="profile">
+
+    <img id="preview"
+    src="https://via.placeholder.com/170x170.png?text=Profile"
+    alt="Profile">
+
+    <br>
+
+    <label for="upload" class="upload-btn">
+        📷 เปลี่ยนรูปโปรไฟล์
+    </label>
+
+    <input type="file" id="upload" accept="image/*">
+
+</div>
 
 <div class="menu">
 
@@ -77,40 +130,43 @@ footer{
 ประวัติส่วนตัว
 </a>
 
-
 <a href="education.html">
 🎓<br>
 ประวัติการศึกษา
 </a>
-
 
 <a href="works.html">
 💻<br>
 ผลงาน
 </a>
 
-
 <a href="certificate.html">
 🏆<br>
 เกียรติบัตร
 </a>
-
 
 <a href="contact.html">
 📞<br>
 ช่องทางติดต่อ
 </a>
 
-
 </div>
 
-
 <footer>
-
 © 2026 My Portfolio
-
 </footer>
 
+<script>
+const upload = document.getElementById("upload");
+const preview = document.getElementById("preview");
+
+upload.addEventListener("change", function(){
+    const file = this.files[0];
+    if(file){
+        preview.src = URL.createObjectURL(file);
+    }
+});
+</script>
 
 </body>
 </html>
