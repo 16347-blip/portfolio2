@@ -1,141 +1,182 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio ของฉัน</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+    scroll-behavior:smooth;
+}
 
-        body{
-            background:inear-gradient(135deg,#0096C7);
-            color:#fff;
-        }
+body{
+    background:#bdefff; /* สีฟ้าอ่อนน้ำทะเล */
+    color:#333;
+}
 
-        header{
-            background:#0077cc;
-            color:white;
-            padding:20px;
-            text-align:center;
-        }
+/* ส่วนหัว */
+header{
+    background:#4fc3f7;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
 
-        nav{
-            background:#005fa3;
-            display:flex;
-            justify-content:center;
-        }
+header img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:15px;
+}
 
-        nav a{
-            color:white;
-            padding:15px 20px;
-            text-decoration:none;
-        }
+header h1{
+    font-size:36px;
+}
 
-        nav a:hover{
-            background:#00457a;
-        }
+header p{
+    font-size:18px;
+}
 
-        section{
-            max-width:900px;
-            margin:auto;
-            padding:50px 20px;
-        }
+/* เมนู */
+nav{
+    background:#0288d1;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+}
 
-        h2{
-            color:#0077cc;
-            margin-bottom:15px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        .card{
-            background:white;
-            padding:20px;
-            margin:15px 0;
-            border-radius:10px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
+nav a:hover{
+    background:#0277bd;
+}
 
-        footer{
-            background:#0077cc;
-            color:white;
-            text-align:center;
-            padding:15px;
-            margin-top:30px;
-        }
-    </style>
+/* กล่องเนื้อหา */
+section{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+section h2{
+    color:#0288d1;
+    margin-bottom:15px;
+    border-bottom:2px solid #81d4fa;
+    padding-bottom:10px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:8px 0;
+}
+
+/* ส่วนท้าย */
+footer{
+    background:#0288d1;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+
 </head>
 <body>
 
 <header>
-    <h1>My Portfolio</h1>
-    <p>ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
+
+    <!-- เปลี่ยน profile.jpg เป็นรูปของตนเอง -->
+    <img src="profile.jpg" alt="Profile">
+
+    <h1>นางสาวชญานิน จันทะรี</h1>
+    <p>PORTFOLIO</p>
+
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="#personal">ประวัติส่วนตัว</a>
+    <a href="#education">ประวัติการศึกษา</a>
+    <a href="#projects">กิจกรรมจิตอาสา</a>
+    <a href="#certificate">เกียรติบัตร</a>
+    <a href="#contact">ติดต่อ</a>
 </nav>
 
-<section id="home">
-    <div class="card">
-        <h2>🏠 Home</h2>
-        <p>สวัสดีครับ ผมเป็นนักพัฒนาเว็บไซต์และกำลังพัฒนาทักษะด้านการเขียนโปรแกรม</p>
-    </div>
+<!-- ประวัติส่วนตัว -->
+<section id="personal">
+    <h2>👤 ประวัติส่วนตัว</h2>
+    <p><b>ชื่อ :</b> นางสาวชญานิน จันทะรี</p>
+    <p><b>วันเกิด :</b> 11 ตุลาคม 2551</p>
+    <p><b>อายุ :</b> 17 ปี</p>
+    <p><b>ที่อยู่ :</b> จังหวัด ชลบุรี</p>
+    <p><b>งานอดิเรก :</b> อ่านหนังสือ ฟังเพลง เล่นเกม</p>
 </section>
 
-<section id="about">
-    <div class="card">
-        <h2>👤 About Me</h2>
-        <p>
-            ชื่อ: นางสาวชญานิน จันทะรี <br>
-            อายุ: 17 ปี<br>
-            สนใจด้าน สัตวแพทย์
-        </p>
-    </div>
+<!-- ประวัติการศึกษา -->
+<section id="education">
+    <h2>🎓 ประวัติการศึกษา</h2>
+    <ul>
+        <li>ประถมศึกษา : โรงเรียน วัดพานทอง</li>
+        <li>มัธยมศึกษาตอนต้น : โรงเรีย ประชาสงเคราะห์</li>
+        <li>กำลังศึกษาชั้นมัธยมศึกษาตอนปลาย : โรงเรียน พานทอง</li>
+    </ul>
 </section>
 
-<section id="portfolio">
-    <div class="card">
-        <h2>💼 Portfolio</h2>
-        <ul>
-            <li>เว็บไซต์ร้านกาแฟ</li>
-            <li>ระบบจัดการนักเรียน</li>
-            <li>เว็บไซต์ Portfolio ส่วนตัว</li>
-        </ul>
-    </div>
+<!-- กิจกรรมจิตอาสา -->
+<section id="projects">
+    <h2>💻 ผลงาน</h2>
+    <ul>
+        <li>เว็บไซต์ Portfolio</li>
+        <li>เว็บไซต์ร้านค้าออนไลน์</li>
+        <li>ระบบจัดการข้อมูลนักเรียน</li>
+        <li>แอปพลิเคชันบันทึกรายรับ-รายจ่าย</li>
+    </ul>
 </section>
 
-<section id="skills">
-    <div class="card">
-        <h2>💻 Skills</h2>
-        <ul>
-            <li>HTML ⭐⭐⭐⭐⭐</li>
-            <li>CSS ⭐⭐⭐⭐☆</li>
-            <li>JavaScript ⭐⭐⭐☆☆</li>
-            <li>Python ⭐⭐⭐⭐☆</li>
-        </ul>
-    </div>
+<!-- เกียรติบัตร -->
+<section id="certificate">
+    <h2>🏆 เกียรติบัตร</h2>
+    <ul>
+        <li>เกียรติบัตรการแข่งขันทักษะคอมพิวเตอร์</li>
+        <li>เกียรติบัตรอบรม HTML & CSS</li>
+        <li>เกียรติบัตรอบรม JavaScript</li>
+        <li>เกียรติบัตรกิจกรรมจิตอาสา</li>
+    </ul>
 </section>
 
+<!-- ติดต่อ -->
 <section id="contact">
-    <div class="card">
-        <h2>📞 Contact</h2>
-        <p>Email : example@email.com</p>
-        <p>Phone : 081-234-5678</p>
-        <p>Facebook : Your Name</p>
-    </div>
+    <h2>📞 ช่องทางการติดต่อ</h2>
+    <p>📧 chyanincanthari@gmail.com</p>
+    <p>📱 โทรศัพท์ : 085-573-4181</p>
+    <p>📘 Facebook : ญานิน ฯ.</p>
+    <p>📷 Instagram : peter_lion_cat_rabbir_dog</p>
 </section>
 
 <footer>
-    <p>&copy; 2026 My Portfolio | All Rights Reserved</p>
+    <p>© 2026 Portfolio | จัดทำโดย </p>
 </footer>
 
 </body>
