@@ -12,69 +12,42 @@ body{
     background:linear-gradient(#d8f8ff,#b7ecff,#ffffff);
     overflow-x:hidden;
 }
-
-
 /* Header */
-
 header{
-
     background:linear-gradient(180deg,#7ee8fa,#008cff);
     color:white;
     padding:60px 20px 120px;
     border-radius:0 0 80px 80px;
     position:relative;
     overflow:hidden;
-
+    z-index:1;
 }
-
-
 h1{
-
     font-size:45px;
     margin-bottom:10px;
-
 }
-
-
 /* โปรไฟล์ */
-
 .profile{
-
     margin-top:-35px;
     position:relative;
     z-index:10;
-
 }
-
-
 .profile img{
-
     width:170px;
     height:170px;
     border-radius:50%;
     object-fit:cover;
-
     /* กรอบไข่มุก */
-
     border:8px solid white;
-
     box-shadow:
     0 0 0 6px #dffaff,
     0 0 0 12px white,
     0 8px 20px rgba(0,0,0,.2);
-
 }
-
-
 .profile input{
-
     display:none;
-
 }
-
-
 .upload-btn{
-
     display:inline-block;
     margin-top:15px;
     background:#00bfff;
@@ -83,263 +56,131 @@ h1{
     border-radius:20px;
     cursor:pointer;
     font-weight:bold;
-
 }
-
-
 .upload-btn:hover{
-
     background:#008dcc;
     transform:scale(1.05);
-
 }
-
-
 /* เมนู */
-
 .menu{
-
     margin:40px;
-
 }
-
-
 .menu a{
-
     display:inline-block;
-
     background:rgba(255,255,255,.6);
-
     color:#008dcc;
-
     text-decoration:none;
-
     padding:20px;
-
     margin:15px;
-
     width:180px;
-
     border-radius:25px;
-
     box-shadow:0 5px 15px #9edfff;
-
     font-size:18px;
-
     font-weight:bold;
-
     transition:.3s;
-
 }
-
-
 .menu a:hover{
-
     background:#00c6ff;
     color:white;
     transform:scale(1.1);
-
 }
-
-
 /* Footer */
-
 footer{
-
     background:#008dcc;
-
     color:white;
-
     padding:20px;
-
 }
-
-
 /* ===================
    ปลาโลมาและปลา
 =================== */
-
-
 .dolphin{
-
     position:fixed;
-
     top:180px;
-
     left:-100px;
-
     font-size:60px;
-
     z-index:5;
-
     animation:dolphinMove 18s linear infinite;
-
 }
-
-
-
 @keyframes dolphinMove{
-
-
 0%{
-
     left:-100px;
-
 }
-
-
 50%{
-
     transform:translateY(-30px);
-
 }
-
-
 100%{
-
     left:110%;
-
 }
-
-
 }
-
-
-
 /* ปลา */
-
 .fish{
-
     position:fixed;
-
     font-size:40px;
-
     z-index:4;
-
 }
-
-
-
 .fish1{
-
     bottom:180px;
-
     left:-100px;
-
     animation:fishMove 15s linear infinite;
-
 }
-
-
 .fish2{
-
     bottom:260px;
-
     left:-120px;
-
     animation:fishMove 22s linear infinite;
-
 }
-
-
 .fish3{
-
     bottom:120px;
-
     left:-150px;
-
     animation:fishMove 18s linear infinite;
-
 }
-
-
-
 @keyframes fishMove{
-
-
 0%{
-
     left:-150px;
-
 }
-
-
 100%{
-
     left:110%;
-
 }
-
-
 }
-
-</style>
 </style>
     .wave{
-
 position:absolute;
-
 bottom:-5px;
-
 left:0;
-
 width:100%;
-
 height:90px;
-
 background:#ffffff;
-
 border-radius:50% 50% 0 0;
-
 opacity:.8;
-
 }
-
 </head>
-
 <body>
-
 <header>
     <h1>🌊 My Portfolio</h1>
     <p>แฟ้มสะสมผลงานของฉัน</p>
-</header<header>
-
-    <h1>🌊 My Portfolio</h1>
-    <p>แฟ้มสะสมผลงานของฉัน</p>
-
     <div class="wave"></div>
-
 </header>
-
 <!-- โปรไฟล์ -->
 <div class="profile">
-
     <img id="preview"
     src="https://via.placeholder.com/170x170.png?text=Profile"
     alt="Profile">
-
     <br>
-
     <label for="upload" class="upload-btn">
         📷 เปลี่ยนรูปโปรไฟล์
     </label>
-
-    <input type="file" id="upload" accept="image/b23.jpg">
-
+    <input type="file" id="upload" accept="image/b23.jpg*">
 </div>
-
 <div class="menu">
-
 <a href="profile.html">
 👤<br>
 ประวัติส่วนตัว
 </a>
-
+    
 <a href="education.html">
 🎓<br>
 ประวัติการศึกษา
 </a>
-
+    
 <a href="works.html">
 💻<br>
 ผลงาน
@@ -360,33 +201,23 @@ opacity:.8;
 <footer>
 © 2026 My Portfolio 🌊
 </footer>
-
-
 <!-- สัตว์ทะเล -->
-
 <div class="dolphin">
 🐬
 </div>
-
-
 <div class="fish fish1">
 🐠
 </div>
-
-
 <div class="fish fish2">
 🐟
 </div>
-
-
 <div class="fish fish3">
 🐡
 </div>
-    
 <script>
 const upload = document.getElementById("upload");
 const preview = document.getElementById("preview");
-
+    
 upload.addEventListener("change", function(){
     const file = this.files[0];
     if(file){
