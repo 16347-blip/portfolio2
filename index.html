@@ -502,6 +502,113 @@ body{
 }
 
 }
+    /* ===================
+   เพิ่มความรกใต้ทะเล
+=================== */
+
+/* ปลาหมึก */
+.octopus{
+    position:fixed;
+    right:-100px;
+    top:300px;
+    font-size:70px;
+    z-index:2;
+    animation:octopusMove 20s linear infinite;
+}
+
+@keyframes octopusMove{
+0%{
+    right:-100px;
+    transform:rotate(10deg);
+}
+100%{
+    right:110%;
+    transform:rotate(-10deg);
+}
+}
+
+
+/* ปูเดิน */
+.crab{
+    position:fixed;
+    bottom:20px;
+    left:-80px;
+    font-size:50px;
+    z-index:3;
+    animation:crabMove 15s linear infinite;
+}
+
+@keyframes crabMove{
+0%{
+    left:-80px;
+}
+100%{
+    left:110%;
+}
+}
+
+
+/* วาฬ */
+.whale{
+    position:fixed;
+    top:450px;
+    right:-150px;
+    font-size:90px;
+    z-index:2;
+    animation:whaleMove 30s linear infinite;
+}
+
+@keyframes whaleMove{
+0%{
+    right:-150px;
+}
+100%{
+    right:110%;
+}
+}
+
+
+/* หอย */
+.shell{
+    font-size:45px;
+    position:fixed;
+    bottom:30px;
+}
+
+.shell1{
+    left:10%;
+}
+
+.shell2{
+    left:80%;
+}
+
+
+/* ดาวทะเล */
+.star{
+    position:fixed;
+    font-size:35px;
+    animation:starSpin 3s infinite alternate;
+}
+
+.star1{
+    top:600px;
+    left:20%;
+}
+
+.star2{
+    top:550px;
+    left:70%;
+}
+
+@keyframes starSpin{
+from{
+    transform:rotate(0deg);
+}
+to{
+    transform:rotate(30deg);
+}
+}
 
 </style>
 
@@ -604,6 +711,35 @@ body{
 <div class="bubble bubble2"></div>
 
 <div class="bubble bubble3"></div>
+    <div class="octopus">
+🐙
+</div>
+
+<div class="crab">
+🦀
+</div>
+
+<div class="whale">
+🐋
+</div>
+
+
+<div class="shell shell1">
+🐚
+</div>
+
+<div class="shell shell2">
+🐚
+</div>
+
+
+<div class="star star1">
+⭐
+</div>
+
+<div class="star star2">
+⭐
+</div>
 <script>
 const upload = document.getElementById("upload");
 const preview = document.getElementById("preview");
