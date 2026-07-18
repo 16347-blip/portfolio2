@@ -44,9 +44,11 @@ h1{
     0 0 0 12px white,
     0 8px 20px rgba(0,0,0,.2);
 }
+    
 .profile input{
     display:none;
 }
+    
 .upload-btn{
     display:inline-block;
     margin-top:15px;
@@ -57,10 +59,12 @@ h1{
     cursor:pointer;
     font-weight:bold;
 }
+    
 .upload-btn:hover{
     background:#008dcc;
     transform:scale(1.05);
 }
+    
 /* เมนู */
 .menu{
     margin:40px;
@@ -79,17 +83,21 @@ h1{
     font-weight:bold;
     transition:.3s;
 }
+    
 .menu a:hover{
     background:#00c6ff;
     color:white;
     transform:scale(1.1);
 }
+    
 /* Footer */
 footer{
     background:#008dcc;
     color:white;
     padding:20px;
 }
+
+    
 /* ===================
    ปลาโลมาและปลา
 =================== */
@@ -101,6 +109,8 @@ footer{
     z-index:2;
     animation:dolphinMove 18s linear infinite;
 }
+
+    
 @keyframes dolphinMove{
 
 0%{
@@ -190,6 +200,8 @@ border-radius:50% 50% 0 0;
 opacity:.8;
 
 }
+
+    
     /* ===================
    เต่าทะเล + ฟองอากาศ + ปะการัง
 =================== */
@@ -339,6 +351,8 @@ opacity:.8;
     border-radius:40px 40px 0 0;
 
 }
+
+    
     /* ===================
    เมฆ + แสงน้ำ
 =================== */
@@ -502,6 +516,8 @@ body{
 }
 
 }
+
+    
     /* ===================
    เพิ่มความรกใต้ทะเล
 =================== */
@@ -609,6 +625,7 @@ to{
     transform:rotate(30deg);
 }
 }
+
     
     .sand{
     position:fixed;
@@ -621,6 +638,7 @@ to{
     z-index:5;
 }
 
+    
 .castle{
     position:fixed;
     bottom:80px;
@@ -630,6 +648,7 @@ to{
     z-index:6;
 }
 
+    
 .treasure{
     position:fixed;
     bottom:40px;
@@ -637,6 +656,7 @@ to{
     font-size:55px;
     z-index:7;
 }
+    
 
     .ship{
     position:fixed;
@@ -647,6 +667,7 @@ to{
     animation:shipMove 35s linear infinite;
 }
 
+    
 @keyframes shipMove{
 0%{
     left:-200px;
@@ -668,6 +689,8 @@ to{
 </head>
 <body>
 
+
+    
 <!-- ท้องฟ้าและแสงน้ำ -->
 
 <div class="cloud cloud1">
@@ -678,41 +701,53 @@ to{
 ☁️
 </div>
 
+    
 
 <div class="sparkle sparkle1">
 ✨
 </div>
 
+    
 <div class="sparkle sparkle2">
 ✨
 </div>
     <div class="sand"></div>
 
+    
 <div class="castle">
 🏖️🏰
 </div>
 
+    
 <div class="treasure">
 🪙💎
 </div>
 
+    
 <div class="sparkle sparkle3">
 ✨
 </div>
 
+    
     <div class="ship">
 ⛵
 </div>
 
+    
 <div class="anchor">
 ⚓
 </div>
 
+    
 <header>
+
     <h1>🌊 My Portfolio</h1>
     <p>แฟ้มสะสมผลงานของฉัน</p>
     <div class="wave"></div>
+    
 </header>
+
+    
 <!-- โปรไฟล์ -->
 <div class="profile">
     <img id="preview"
@@ -725,55 +760,69 @@ to{
     <input type="file" id="upload" accept="image/*">
 </div>
 <div class="menu">
+
+    
 <a href="profile.html">
 👤<br>
 ประวัติส่วนตัว
 </a>
+
     
 <a href="education.html">
 🎓<br>
 ประวัติการศึกษา
 </a>
+
     
 <a href="works.html">
 💻<br>
 ผลงาน
 </a>
 
+    
 <a href="certificate.html">
 🏆<br>
 เกียรติบัตร
 </a>
 
+    
 <a href="contact.html">
 📞<br>
 ช่องทางติดต่อ
 </a>
 
+    
 </div>
 <div class="coral">
 🪸 🌿 🪸 🐚 ⭐ 🪸 🌿 🪸
 </div>
 
+    
 <footer>
 © 2026 My Portfolio 🌊
 </footer>
+    
 <!-- สัตว์ทะเล -->
 <div class="dolphin">
 🐬
 </div>
+    
 <div class="fish fish1">
 🐠
 </div>
+    
 <div class="fish fish2">
 🐟
 </div>
+    
 <div class="fish fish3">
 🐡
 </div>
+    
     <div class="turtle">
 🐢
 </div>
+    
 
 
 <div class="bubble bubble1"></div>
@@ -781,14 +830,18 @@ to{
 <div class="bubble bubble2"></div>
 
 <div class="bubble bubble3"></div>
+
+    
     <div class="octopus">
 🐙
 </div>
 
+    
 <div class="crab">
 🦀
 </div>
 
+    
 <div class="whale">
 🐋
 </div>
@@ -810,6 +863,9 @@ to{
 <div class="star star2">
 ⭐
 </div>
+
+
+    
 <script>
 const upload = document.getElementById("upload");
 const preview = document.getElementById("preview");
