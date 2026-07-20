@@ -231,7 +231,6 @@ footer{
     background:#ffe5a0;
     border-radius:50% 50% 0 0;
     z-index:1;
-}
 
 }
 
@@ -251,9 +250,23 @@ footer{
     
 
 /* ปูเดิน */
+/* ปูเดิน */
 .crab{
-    font-size:25px;
+    position:fixed;
+    left:-100px;
     bottom:35px;
+    font-size:25px;
+    z-index:6;
+    animation:crabMove 15s linear infinite;
+}
+
+@keyframes crabMove{
+    from{
+        left:-100px;
+    }
+    to{
+        left:110%;
+    }
 }
 
 @keyframes crabMove{
@@ -357,6 +370,53 @@ footer{
         transform:translateY(-100vh);
     }
 }
+
+    .star{
+    position:fixed;
+    font-size:25px;
+    z-index:1;
+    animation:starMove 3s infinite alternate;
+}
+
+.star1{
+    bottom:80px;
+    left:15%;
+}
+
+.star2{
+    bottom:100px;
+    right:15%;
+}
+
+@keyframes starMove{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(30deg);
+    }
+}
+
+    .small1{
+    width:15px;
+    height:15px;
+    left:20%;
+    animation-duration:7s;
+}
+
+.small2{
+    width:10px;
+    height:10px;
+    left:50%;
+    animation-duration:9s;
+}
+
+.small3{
+    width:18px;
+    height:18px;
+    left:80%;
+    animation-duration:12s;
+}
 </style>
 
 </head>
@@ -440,9 +500,6 @@ hidden>
 
 
 <!-- รูปโปรไฟล์ -->
-
-<div class="profile">
-
 
 <div class="profile">
 
