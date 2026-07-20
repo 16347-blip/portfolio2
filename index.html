@@ -305,6 +305,79 @@ footer{
     font-size:70px;
     z-index:7;
 }
+
+    /* เรือโจรสลัด */
+.ship{
+    position:fixed;
+    top:180px;
+    left:-200px;
+    font-size:80px;
+    z-index:3;
+    animation:shipMove 30s linear infinite;
+}
+
+@keyframes shipMove{
+    from{
+        left:-200px;
+    }
+    to{
+        left:110%;
+    }
+}
+
+
+/* หีบสมบัติ */
+.chest{
+    position:fixed;
+    bottom:80px;
+    left:20%;
+    font-size:60px;
+    z-index:7;
+}
+
+
+/* ปะการัง */
+.coral{
+    position:fixed;
+    bottom:70px;
+    left:45%;
+    font-size:55px;
+    z-index:6;
+}
+
+
+/* ฟองอากาศ */
+.bubble{
+    position:fixed;
+    bottom:-50px;
+    background:white;
+    border-radius:50%;
+    opacity:.5;
+    z-index:2;
+    animation:bubbleUp 10s infinite;
+}
+
+.bubble1{
+    width:25px;
+    height:25px;
+    left:25%;
+}
+
+.bubble2{
+    width:40px;
+    height:40px;
+    left:75%;
+    animation-delay:3s;
+}
+
+@keyframes bubbleUp{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-100vh);
+    }
+}
 </style>
 
 </head>
@@ -380,6 +453,28 @@ hidden>
 <div class="treasure">
 🏴‍☠️💰
 </div>
+
+
+    <!-- โลกใต้ทะเล -->
+
+<div class="ship">
+🏴‍☠️🚢
+</div>
+
+
+<div class="chest">
+🗝️💎📦
+</div>
+
+
+<div class="coral">
+🪸🌿🪸🐚⭐🪸
+</div>
+
+
+<div class="bubble bubble1"></div>
+
+<div class="bubble bubble2"></div>
 
 
 
