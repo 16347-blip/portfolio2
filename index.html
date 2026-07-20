@@ -3,879 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <title>My Portfolio</title>
+
 <style>
 
 body{
     margin:0;
-    font-family:"Tahoma";
+    font-family:tahoma;
     text-align:center;
-    background:linear-gradient(#d8f8ff,#b7ecff,#ffffff);
-    overflow-x:hidden;
+    background:#dff8ff;
 }
-/* Header */
-header{
-    background:linear-gradient(180deg,#7ee8fa,#008cff);
+
+
+/* หน้าปก */
+.cover{
+    height:350px;
+    background:
+    linear-gradient(#00bfff99,#008cff99),
+    url("images/cover.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:0 0 60px 60px;
+}
+
+
+.cover-box{
     color:white;
-    padding:60px 20px 120px;
-    border-radius:0 0 80px 80px;
-    position:relative;
-    overflow:hidden;
-    z-index:1;
+    background:#ffffff55;
+    padding:30px;
+    border-radius:30px;
 }
-h1{
+
+
+.cover h1{
     font-size:45px;
-    margin-bottom:10px;
 }
-/* โปรไฟล์ */
+
+
+/* รูปโปรไฟล์ */
+
 .profile{
-    margin-top:-35px;
-    position:relative;
-    z-index:10;
+    margin-top:-50px;
 }
-.profile img{
-    width:170px;
-    height:170px;
+
+
+.pearl{
+
+    width:180px;
+    height:180px;
+
+    margin:auto;
+
+    padding:10px;
+
     border-radius:50%;
-    object-fit:cover;
-    /* กรอบไข่มุก */
-    border:8px solid white;
+
+    background:
+    radial-gradient(circle,#fff,#aeefff,#00bfff);
+
     box-shadow:
-    0 0 0 6px #dffaff,
-    0 0 0 12px white,
-    0 8px 20px rgba(0,0,0,.2);
+    0 0 0 8px white,
+    0 5px 20px #008cff;
+
 }
-    
-.profile input{
-    display:none;
+
+
+.pearl img{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
 }
-    
-.upload-btn{
-    display:inline-block;
-    margin-top:15px;
+
+
+/* ปุ่ม */
+
+button,label{
+
+    background:#00bfff;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+}
+
+
+/* เมนู */
+
+.menu a{
+
+    display:inline-flex;
+
+    width:130px;
+    height:130px;
+
+    margin:15px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#008cff;
+
+    text-decoration:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px #9eeaff;
+
+}
+
+
+.menu a:hover{
+
     background:#00bfff;
     color:white;
-    padding:10px 22px;
-    border-radius:20px;
-    cursor:pointer;
-    font-weight:bold;
+
 }
-    
-.upload-btn:hover{
-    background:#008dcc;
-    transform:scale(1.05);
-}
-    
-/* เมนู */
-.menu{
-    margin:40px;
-}
-.menu a{
-    display:inline-block;
-    background:rgba(255,255,255,.6);
-    color:#008dcc;
-    text-decoration:none;
-    padding:20px;
-    margin:15px;
-    width:180px;
-    border-radius:25px;
-    box-shadow:0 5px 15px #9edfff;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-    
-.menu a:hover{
-    background:#00c6ff;
-    color:white;
-    transform:scale(1.1);
-}
-    
-/* Footer */
+
+
 footer{
-    background:#008dcc;
-    color:white;
-    padding:20px;
-}
 
-    
-/* ===================
-   ปลาโลมาและปลา
-=================== */
-.dolphin{
-    position:fixed;
-    top:180px;
-    left:-100px;
-    font-size:60px;
-    z-index:2;
-    animation:dolphinMove 18s linear infinite;
-}
-
-    
-@keyframes dolphinMove{
-
-0%{
-    left:-100px;
-}
-
-50%{
-    transform:translateY(-30px);
-}
-
-100%{
-    left:110%;
-}
-
-}
-
-
-/* ปลา */
-
-.fish{
-
-    position:fixed;
-    font-size:40px;
-   z-index:2;
-
-}
-
-
-.fish1{
-
-    bottom:180px;
-    left:-100px;
-    animation:fishMove 15s linear infinite;
-
-}
-
-
-.fish2{
-
-    bottom:260px;
-    left:-120px;
-    animation:fishMove 22s linear infinite;
-
-}
-
-
-.fish3{
-
-    bottom:120px;
-    left:-150px;
-    animation:fishMove 18s linear infinite;
-
-}
-
-
-@keyframes fishMove{
-
-0%{
-
-    left:-150px;
-
-}
-
-100%{
-
-    left:110%;
-
-}
-
-}
-.wave{
-
-position:absolute;
-
-bottom:-5px;
-
-left:0;
-
-width:100%;
-
-height:90px;
-
-background:white;
-
-border-radius:50% 50% 0 0;
-
-opacity:.8;
-
-}
-
-    
-    /* ===================
-   เต่าทะเล + ฟองอากาศ + ปะการัง
-=================== */
-
-
-/* เต่าทะเล */
-
-.turtle{
-
-    position:fixed;
-
-    bottom:100px;
-
-    left:-100px;
-
-    font-size:50px;
-
-    z-index:2;
-
-    animation:turtleMove 25s linear infinite;
-
-}
-
-
-@keyframes turtleMove{
-
-0%{
-
-    left:-100px;
-
-}
-
-100%{
-
-    left:110%;
-
-}
-
-}
-
-
-
-/* ฟองอากาศ */
-
-.bubble{
-
-    position:fixed;
-
-    bottom:-50px;
-
-    background:rgba(255,255,255,.6);
-
-    border-radius:50%;
-
-    z-index:2;
-
-    animation:bubbleMove linear infinite;
-
-}
-
-
-.bubble1{
-
-    width:25px;
-
-    height:25px;
-
-    left:20%;
-
-    animation-duration:8s;
-
-}
-
-
-.bubble2{
-
-    width:15px;
-
-    height:15px;
-
-    left:50%;
-
-    animation-duration:10s;
-
-}
-
-
-.bubble3{
-
-    width:35px;
-
-    height:35px;
-
-    left:75%;
-
-    animation-duration:12s;
-
-}
-
-
-
-@keyframes bubbleMove{
-
-
-0%{
-
-    transform:translateY(0);
-
-    opacity:0;
-
-}
-
-
-30%{
-
-    opacity:1;
-
-}
-
-
-100%{
-
-    transform:translateY(-100vh);
-
-    opacity:0;
-
-}
-
-}
-
-
-
-/* ปะการัง */
-
-.coral{
-
-    background:#bff6ff;
-
-    font-size:45px;
-
-    padding:20px;
-
-    margin-top:20px;
-
-    letter-spacing:5px;
-
-    border-radius:40px 40px 0 0;
-
-}
-
-    
-    /* ===================
-   เมฆ + แสงน้ำ
-=================== */
-
-
-/* เมฆ */
-
-.cloud{
-
-    position:fixed;
-
-    top:40px;
-
-    font-size:70px;
-
-    opacity:.8;
-
-    z-index:0;
-
-    animation:cloudMove 35s linear infinite;
-
-}
-
-
-.cloud1{
-
-    left:-150px;
-
-}
-
-
-.cloud2{
-
-    top:120px;
-
-    left:-250px;
-
-    font-size:50px;
-
-    animation-duration:45s;
-
-}
-
-
-
-@keyframes cloudMove{
-
-0%{
-
-    left:-200px;
-
-}
-
-100%{
-
-    left:110%;
-
-}
-
-}
-
-
-
-/* แสงระยิบระยับ */
-
-.sparkle{
-
-    position:fixed;
+    background:#008cff;
 
     color:white;
 
-    font-size:25px;
-
-    z-index:1;
-
-    animation:shine 2s infinite alternate;
+    padding:15px;
 
 }
 
 
-.sparkle1{
-
-    top:250px;
-
-    left:20%;
-
-}
-
-
-.sparkle2{
-
-    top:350px;
-
-    left:70%;
-
-}
-
-
-.sparkle3{
-
-    top:500px;
-
-    left:40%;
-
-}
-
-
-
-@keyframes shine{
-
-from{
-
-    opacity:.3;
-
-    transform:scale(1);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:scale(1.5);
-
-}
-
-}
-
-
-
-/* เอฟเฟกต์น้ำไหล */
-
-body{
-
-    background-size:200% 200%;
-
-    animation:waterMove 8s ease infinite;
-
-}
-
-
-@keyframes waterMove{
-
-0%{
-
-    background-position:0% 50%;
-
-}
-
-50%{
-
-    background-position:100% 50%;
-
-}
-
-100%{
-
-    background-position:0% 50%;
-
-}
-
-}
-
-    
-    /* ===================
-   เพิ่มความรกใต้ทะเล
-=================== */
-
-/* ปลาหมึก */
-.octopus{
-    position:fixed;
-    right:-100px;
-    top:300px;
-    font-size:70px;
-    z-index:2;
-    animation:octopusMove 20s linear infinite;
-}
-
-@keyframes octopusMove{
-0%{
-    right:-100px;
-    transform:rotate(10deg);
-}
-100%{
-    right:110%;
-    transform:rotate(-10deg);
-}
-}
-
-
-/* ปูเดิน */
-.crab{
-    position:fixed;
-    bottom:20px;
-    left:-80px;
-    font-size:50px;
-    z-index:3;
-    animation:crabMove 15s linear infinite;
-}
-
-@keyframes crabMove{
-0%{
-    left:-80px;
-}
-100%{
-    left:110%;
-}
-}
-
-
-/* วาฬ */
-.whale{
-    position:fixed;
-    top:450px;
-    right:-150px;
-    font-size:90px;
-    z-index:2;
-    animation:whaleMove 30s linear infinite;
-}
-
-@keyframes whaleMove{
-0%{
-    right:-150px;
-}
-100%{
-    right:110%;
-}
-}
-
-
-/* หอย */
-.shell{
-    font-size:45px;
-    position:fixed;
-    bottom:30px;
-}
-
-.shell1{
-    left:10%;
-}
-
-.shell2{
-    left:80%;
-}
-
-
-/* ดาวทะเล */
-.star{
-    position:fixed;
-    font-size:35px;
-    animation:starSpin 3s infinite alternate;
-}
-
-.star1{
-    top:600px;
-    left:20%;
-}
-
-.star2{
-    top:550px;
-    left:70%;
-}
-
-@keyframes starSpin{
-from{
-    transform:rotate(0deg);
-}
-to{
-    transform:rotate(30deg);
-}
-}
-
-    
-    .sand{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:120px;
-    background:#ffe7a8;
-    border-radius:50% 50% 0 0;
-    z-index:5;
-}
-
-    
-.castle{
-    position:fixed;
-    bottom:80px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:100px;
-    z-index:6;
-}
-
-    
-.treasure{
-    position:fixed;
-    bottom:40px;
-    left:30%;
-    font-size:55px;
-    z-index:7;
-}
-    
-
-    .ship{
-    position:fixed;
-    top:200px;
-    left:-200px;
-    font-size:90px;
-    z-index:2;
-    animation:shipMove 35s linear infinite;
-}
-
-    
-@keyframes shipMove{
-0%{
-    left:-200px;
-}
-100%{
-    left:110%;
-}
-}
-
-.anchor{
-    position:fixed;
-    bottom:130px;
-    right:10%;
-    font-size:60px;
-    z-index:3;
-}
 </style>
 
 </head>
+
+
 <body>
 
 
-    
-<!-- ท้องฟ้าและแสงน้ำ -->
+<!-- หน้าปก -->
 
-<div class="cloud cloud1">
-☁️
+<header class="cover">
+
+<div class="cover-box">
+
+<h1>🌊 My Portfolio</h1>
+
+<p>แฟ้มสะสมผลงานของฉัน</p>
+
+
+<label>
+
+🖼️ เปลี่ยนหน้าปก
+
+<input id="coverUpload"
+type="file"
+accept="image/*"
+hidden>
+
+</label>
+
+
 </div>
 
-<div class="cloud cloud2">
-☁️
-</div>
-
-    
-
-<div class="sparkle sparkle1">
-✨
-</div>
-
-    
-<div class="sparkle sparkle2">
-✨
-</div>
-    <div class="sand"></div>
-
-    
-<div class="castle">
-🏖️🏰
-</div>
-
-    
-<div class="treasure">
-🪙💎
-</div>
-
-    
-<div class="sparkle sparkle3">
-✨
-</div>
-
-    
-    <div class="ship">
-⛵
-</div>
-
-    
-<div class="anchor">
-⚓
-</div>
-
-    
-<header>
-
-    <h1>🌊 My Portfolio</h1>
-    <p>แฟ้มสะสมผลงานของฉัน</p>
-    <div class="wave"></div>
-    
 </header>
 
-    
-<img id="preview"
-     src="images/MEITU_20260719_233316491.jpg"
-     alt="Profile">
 
-    <br>
 
-    <label for="upload" class="upload-btn">
-        📷 เปลี่ยนรูปโปรไฟล์
-    </label>
+<!-- รูปโปรไฟล์ -->
 
-<input type="file" id="upload" accept="image/MEITU_20260719_233316491.jpg*">
+<div class="profile">
+
+
+<div class="pearl">
+
+<img id="profileImg"
+src="images/profile.jpg">
+
 </div>
-    
+
+
+<br>
+
+
+<label>
+
+📷 เปลี่ยนรูปโปรไฟล์
+
+<input id="profileUpload"
+type="file"
+accept="image/*"
+hidden>
+
+</label>
+
+
+</div>
+
+
+
+
+<!-- เมนู -->
+
+<div class="menu">
+
+
 <a href="profile.html">
-👤<br>
-ประวัติส่วนตัว
+👤
+<br>
+ประวัติ
 </a>
 
-    
+
 <a href="education.html">
-🎓<br>
-ประวัติการศึกษา
+🎓
+<br>
+การศึกษา
 </a>
 
-    
+
 <a href="works.html">
-💻<br>
+💻
+<br>
 ผลงาน
 </a>
 
-    
+
 <a href="certificate.html">
-🏆<br>
+🏆
+<br>
 เกียรติบัตร
 </a>
 
-    
+
 <a href="contact.html">
-📞<br>
-ช่องทางติดต่อ
+📞
+<br>
+ติดต่อ
 </a>
 
-    
-</div>
-<div class="coral">
-🪸 🌿 🪸 🐚 ⭐ 🪸 🌿 🪸
+
 </div>
 
-    
+
+
 <footer>
+
 © 2026 My Portfolio 🌊
+
 </footer>
-    
-<!-- สัตว์ทะเล -->
-<div class="dolphin">
-🐬
-</div>
-    
-<div class="fish fish1">
-🐠
-</div>
-    
-<div class="fish fish2">
-🐟
-</div>
-    
-<div class="fish fish3">
-🐡
-</div>
-    
-    <div class="turtle">
-🐢
-</div>
-    
 
 
-<div class="bubble bubble1"></div>
-
-<div class="bubble bubble2"></div>
-
-<div class="bubble bubble3"></div>
-
-    
-    <div class="octopus">
-🐙
-</div>
-
-    
-<div class="crab">
-🦀
-</div>
-
-    
-<div class="whale">
-🐋
-</div>
 
 
-<div class="shell shell1">
-🐚
-</div>
-
-<div class="shell shell2">
-🐚
-</div>
-
-
-<div class="star star1">
-⭐
-</div>
-
-<div class="star star2">
-⭐
-</div>
-
-
-    
 <script>
-const upload = document.getElementById("upload");
-const preview = document.getElementById("preview");
-    
-upload.addEventListener("change", function(){
-    const file = this.files[0];
-    if(file){
-        preview.src = URL.createObjectURL(file);
-    }
-});
+
+
+// เปลี่ยนรูปโปรไฟล์
+
+profileUpload.onchange=function(){
+
+profileImg.src=
+URL.createObjectURL(this.files[0]);
+
+}
+
+
+
+// เปลี่ยนหน้าปก
+
+coverUpload.onchange=function(){
+
+document.querySelector(".cover").style.backgroundImage=
+
+`url(${URL.createObjectURL(this.files[0])})`;
+
+}
+
+
 </script>
+
+
 
 </body>
 </html>
